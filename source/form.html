@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Cat Energy: каталог продукции</title>
+  </head>
+  <body class="page__body">
+    <header class="page-header">
+      <div class="content-container">
+        <nav class="header-nav">
+          <a class="header-nav__logo-link">
+            <img class="logo-image header-nav__logo-position" src="img/logo-image.svg" width="34" height="38" alt="Логотип магазина Cat Energy">
+            <img class="brand-image" src="img/brand-image.svg" width="101" height="18" alt="Бренд магазина Cat Energy">
+          </a>
+          <button class="header-nav__toggle" type="button" aria-label="Показать меню сайта.">
+            <svg width="20" height="20" viewBox="0 0 20 20" role="img" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <line y1="-0.75" x2="24.7577" y2="-0.75" transform="matrix(0.686589 -0.727046 0.686589 0.727046 2.00171 20)" stroke="black" stroke-width="1.5"/>
+              <line y1="-0.75" x2="24.7577" y2="-0.75" transform="matrix(0.686589 0.727046 -0.686589 0.727046 1 2)" stroke="black" stroke-width="1.5"/>
+            </svg>
+          </button>
+          <ul class="nav-list">
+            <li class="nav-list__item">
+              <a class="nav-list__link" href="index.html">Главная</a>
+            </li>
+            <li class="nav-list__item">
+              <a class="nav-list__link" href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="nav-list__item nav-list__item--current">
+              <a class="nav-list__link">Подбор программы</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <section class="program">
+        <div class="content-container">
+          <h1 class="heading-primary program__title">Подбор программы</h1>
+          <p class="program__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+          <form class="program__form" action="https://echo.htmlacademy.ru/" method="post">
+            <fieldset class="program__field">
+              <legend class="visually-hidden">Данные вашего питомца</legend>
+              <div class="program__field-container">
+                <ul class="program__cat-list">
+                  <li class="program__cat-item">
+                    <label class="program__label">Имя:*
+                      <input type="text" name="cat-name" placeholder="Барсик" value="" required>
+                    </label>
+                  </li>
+                  <li class="program__cat-item">
+                    <label class="program__label">Вес (кг):*
+                      <input type="text" name="cat-weight" placeholder="7" value="" required>
+                    </label>
+                  </li>
+                  <li class="program__cat-item">
+                    <label class="program__label">Возраст (лет):
+                      <input type="text" name="cat-age" placeholder="7" value="">
+                    </label>
+                  </li>
+                </ul>
+                <ul class="program__list">
+                  <li class="program__item">
+                    <label class="program__label">
+                      <input type="radio" name="program-type">Похудение
+                    </label>
+                  </li>
+                  <li class="program__item">
+                    <label class="program__label">
+                      <input type="radio" name="program-type">Набор массы
+                    </label>
+                  </li>
+                  <li class="program__item">
+                    <label class="program__label">
+                      <input type="radio" name="program-type">Не знаю (Нужен ваш совет)
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </fieldset>
+            <fieldset class="program__field">
+              <legend class="program__title">Контактные данные (владельца кота)</legend>
+              <ul class="program__human-list">
+                <li class="program__human-item">
+                  <label class="program__label">E-mail:*
+                    <input class="program__email" type="email" name="e-mail" placeholder="kuklachev@gmail.com" required>
+                  </label>
+                </li>
+                <li class="program__human-item">
+                  <label class="program__label">Телефон:*
+                    <input class="program__email" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="program__field">
+              <legend class="program__title">Комментарий</legend>
+              <textarea class="program__habits program__label" name="cat-habits">Расскажите обо всех повадках кота</textarea>
+            </fieldset>
+            <fieldset class="program__field">
+              <legend class="visually-hidden">Дополнительно</legend>
+                <ul class="program__list">
+                  <li class="program__item">
+                    <label class="program__label">
+                      <input type="checkbox" name="extra-sugar" checked>Сахарозаменитель
+                    </label>
+                  </li>
+                  <li class="program__item">
+                    <label class="program__label">
+                      <input type="checkbox" name="extra-water">Питьевая вода
+                    </label>
+                  </li>
+                  <li class="program__item">
+                    <label class="program__label">
+                      <input type="checkbox" name="extra-milk">Молоко
+                    </label>
+                  </li>
+                  <li class="program__item">
+                    <label class="program__label">
+                      <input type="checkbox" name="extra-vitamins">Витамины
+                    </label>
+                  </li>
+                </ul>
+            </fieldset>
+            <div class="program__accept">
+              <button class="button program__button" type="submit">Отправить заявку</button>
+              <p class="program__text">* — Обязательные поля</p>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="contacts">
+        <h2 class="visually-hidden">Наши контакты</h2>
+        <img class="contacts__map-image" src="img/contacts-map.jpg" width="320" height="362" alt="Карта с раположением магазина">
+        <div class="content-container">
+          <div class="contacts__block">
+            <p class="contacts__text contacts__text--weight">Приглашаем к сотрудничеству дилеров!</p>
+            <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+          </div>
+        </div>
+      </section>
+
+      <footer class="page-footer">
+        <div class="content-container">
+          <div class="footer-logo page-footer__logo">
+            <a class="footer-logo__link">
+              <img class="brand-image" src="img/brand-image.svg" width="101" height="18" alt="Бренд магазина Cat Energy">
+            </a>
+          </div>
+          <div class="social page-footer__social">
+            <ul class="social__list">
+              <li class="social__item">
+                <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
+              </li>
+            </ul>
+          </div>
+          <div class="copyright page-footer__copyright">
+            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+              <p class="copyright__text">HTMLAcademy</p>
+              <svg width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z" fill="#666666"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
