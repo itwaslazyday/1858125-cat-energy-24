@@ -2,11 +2,11 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Кэт энерджи</title>
+    <title>Cat Energy: твой кот, твои правила!</title>
   </head>
   <body class="page__body">
     <header class="page-header">
-      <div class="page-header__wrapper">
+      <div class="container">
         <nav class="header-nav">
           <a class="header-nav__logo-link">
             <img class="logo-image header-nav__logo-position" src="img/logo-image.svg" width="34" height="38" alt="Логотип магазина Cat Energy">
@@ -23,18 +23,18 @@
               <a class="nav-list__link nav-list__link--index">Главная</a>
             </li>
             <li class="nav-list__item">
-              <a class="nav-list__link nav-list__link--index" href="#">Каталог продукции</a>
+              <a class="nav-list__link nav-list__link--index" href="catalog.html">Каталог продукции</a>
             </li>
             <li class="nav-list__item">
-              <a class="nav-list__link nav-list__link--index" href="#">Подбор программы</a>
+              <a class="nav-list__link nav-list__link--index" href="form.html">Подбор программы</a>
             </li>
           </ul>
         </nav>
         <div class="promo">
-          <h1 class="heading-primary promo__title">Функциональное питание для котов</h1>
+          <h1 class="heading-primary heading-primary--m-white promo__title">Функциональное питание для котов</h1>
           <p class="promo__text">Занялся собой? Займись и котом!</p>
           <img class="promo__image" src="img/promo-image.png" width="280" height="270" alt="Продукция магазина Cat Energy">
-          <a class="button promo__button" href="#">Подобрать программу</a>
+          <a class="button promo__button" href="form.html">Подобрать программу</a>
         </div>
       </div>
     </header>
@@ -42,7 +42,7 @@
     <main class="page-main">
       <section class="feed-program">
         <h2 class="visually-hidden">Выбор программы питания</h2>
-        <div class="feed-program__wrapper">
+        <div class="container">
           <ul class="feed-program__list">
             <li class="feed-program__item feed-program__item--icon-slim">
               <h3 class="heading-tertiary feed-program__title">Похудение</h3>
@@ -59,7 +59,7 @@
       </section>
 
       <section class="advantages">
-        <div class="advantages__wrapper">
+        <div class="container">
           <h2 class="heading-secondary advantages__title">Как это работает</h2>
           <ul class="advantages__list">
             <li class="advantages__item advantages__item--icon-natural">
@@ -79,7 +79,7 @@
       </section>
 
       <section class="examples">
-        <div class="examples__wrapper">
+        <div class="container">
           <h2 class="heading-secondary examples__title">Живой пример</h2>
           <p class="examples__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
           <div class="examples__container">
@@ -116,17 +116,16 @@
       <section class="contacts">
         <h2 class="visually-hidden">Наши контакты</h2>
         <img class="contacts__map-image" src="img/contacts-map.jpg" width="320" height="362" alt="Карта с раположением магазина">
-        <img class="logo-image contacts__map-logo" src="img/logo-image.svg" width="34" height="38" alt="Логотип магазина Cat Energy">
-        <div class="contacts__wrapper">
-          <div class="contacts__adress">
+        <div class="container">
+          <div class="contacts__block">
             <p class="contacts__text contacts__text--weight">Приглашаем к сотрудничеству дилеров!</p>
-            <p class="contacts__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+            <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
           </div>
         </div>
       </section>
 
       <footer class="page-footer">
-        <div class="page-footer__wrapper">
+        <div class="container">
           <div class="footer-logo page-footer__logo">
             <a class="footer-logo__link">
               <img class="brand-image" src="img/brand-image.svg" width="101" height="18" alt="Бренд магазина Cat Energy">
