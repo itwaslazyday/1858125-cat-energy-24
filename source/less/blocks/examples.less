@@ -1,10 +1,31 @@
-.examples {
+.examples,
+.examples .container {
   background-color: #eaeaea;
 }
+
+.examples__list {
+  .list-reset;
+  display: flex;
+}
+
+.examples__text {
+  .arial;
+}
+
+.examples__number {
+  .oswald(24px, 24px, @black);
+}
+
+.examples__description {
+  .arial(12px, 12px);
+}
+
 .examples__review {
-  font-size: 14px;
-  line-height: 20px;
+  .oswald(14px, 20px, @black);
   text-align: center;
   text-transform: uppercase;
-  color: #000000;
+}
+
+.cat-slider__list {
+  .list-reset;
 }
