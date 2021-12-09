@@ -1,5 +1,5 @@
 .form__fieldset {
-  .oswald(24px, 26px, @black);
+  .font(24px, 26px, @black);
   border: none;
 }
 
@@ -16,17 +16,24 @@
 }
 
 .form__label {
-  .oswald(16px, 18px, @gray);
+  .font(16px, 18px, @gray);
+  text-transform: uppercase;
 }
 
-.form__input::-webkit-input-placeholder {
-  .oswald(16px, 18px, @gray);
+.form__input {
+  .font(16px, 18px, @gray);
+  font-family: @font-default;
+  text-transform: uppercase;
+}
+
+.form__input::placeholder {
+  .font(16px, 18px, @gray);
   font-family: @font-default;
   text-transform: uppercase;
 }
 
 .form__textarea {
-  .oswald(16px, 18px, @gray);
+  .font(16px, 18px, @gray);
   font-family: @font-default;
 }
 
