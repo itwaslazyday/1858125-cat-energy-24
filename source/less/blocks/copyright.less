@@ -1,8 +1,14 @@
 .copyright__link {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .copyright__text {
   .arial(16px);
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 22px;
+  }
 }
