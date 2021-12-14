@@ -10,6 +10,10 @@
     .font(18px, 24px, @black);
     font-weight: @font-weight-default;
   }
+
+  @media (min-width: @desktop-width) {
+    .font(20px, 30px, @white);
+  }
 }
 
 .nav-list__item {
@@ -25,6 +29,10 @@
       text-underline-offset: 10px;
       text-decoration-color: @green;
       text-decoration-thickness: 2px;
+
+      @media (min-width: @desktop-width) {
+        text-decoration-color: @white;
+      }
     }
   }
 }
@@ -32,4 +40,8 @@
 .nav-list__link {
   color: @black;
   .link-reset;
+
+  @media (min-width: @desktop-width) {
+    color: @white;
+  }
 }
