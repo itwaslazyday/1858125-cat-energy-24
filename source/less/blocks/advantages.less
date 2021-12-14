@@ -7,7 +7,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-bottom: 6px;
+    border-bottom: none;
+    padding-bottom: 7px;
   }
 }
 
@@ -27,11 +28,11 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    row-gap: 37px;
   }
 
   @media (min-width: @desktop-width) {
-    display: flex;
-    justify-content: space-between;
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -45,6 +46,8 @@
     width: 60px;
     height: 60px;
     background-color: @green;
+    background-position: center;
+    background-repeat: no-repeat;
     top: 0;
     left: 0;
 
@@ -57,30 +60,22 @@
 
   &--icon-natural::before {
     background-image: url("../../img/advantages-icon-natural.svg");
-    background-position: center;
-    background-repeat: no-repeat;
   }
 
   &--icon-fast::before {
     background-image: url("../../img/advantages-icon-fast.svg");
-    background-position: center;
-    background-repeat: no-repeat;
   }
 
   &--icon-replace::before {
     background-image: url("../../img/advantages-icon-replace.svg");
-    background-position: center;
-    background-repeat: no-repeat;
   }
 
   &--icon-result::before {
     background-image: url("../../img/advantages-icon-result.svg");
-    background-position: center;
-    background-repeat: no-repeat;
   }
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 37px;
+    margin-bottom: 0;
     min-height: 280px;
   }
 }
