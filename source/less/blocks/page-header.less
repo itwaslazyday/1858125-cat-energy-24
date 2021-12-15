@@ -1,0 +1,34 @@
+.page-header {
+  position: relative;
+  z-index: 1;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 84%;
+    position: absolute;
+    top: 81px;
+    right: 0;
+    background-image: linear-gradient(to bottom, rgba(104, 183, 56, 0.85) 63%, @white 63%), url("../../img/header-background-mobile.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+
+  @media (min-width: @tablet-width) {
+    &::after {
+      display: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::after {
+      display: block;
+      height: 100%;
+      top: 0;
+      background-image: linear-gradient(to right, @white 53%, rgba(104, 183, 56, 0.85) 53%), url("../../img/header-background-desktop.jpg");
+      background-position: top right;
+    }
+  }
+}

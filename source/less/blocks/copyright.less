@@ -1,8 +1,18 @@
 .copyright__link {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    justify-content: flex-end;
+  }
 }
 
 .copyright__text {
   .arial(16px);
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 22px;
+  }
 }

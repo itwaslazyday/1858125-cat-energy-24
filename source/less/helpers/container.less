@@ -1,6 +1,14 @@
 .container {
-  width: 280px;
-  // max-width: 1220px;
   margin: 0 auto;
-  background-color: #ffffff;
+  max-width: @mobile-width;
+  padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    max-width: @tablet-width;
+    padding: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: @desktop-width;
+  }
 }

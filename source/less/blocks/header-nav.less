@@ -1,5 +1,35 @@
 .header-nav {
   display: flex;
   justify-content: space-between;
-  background-color: #ffffff;
+  padding: 25px 0 18px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.header-nav__logo-link {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav__logo-position {
+  margin-right: 57px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 10px;
+  }
+}
+
+.header-nav__toggle {
+  display: block;
+  border: none;
+  cursor: pointer;
+  background: none;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
