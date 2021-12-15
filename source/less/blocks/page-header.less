@@ -16,6 +16,10 @@
     z-index: -1;
   }
 
+  &--non-index::after {
+    display: none;
+  }
+
   @media (min-width: @tablet-width) {
     &::after {
       display: none;
@@ -29,6 +33,10 @@
       top: 0;
       background-image: linear-gradient(to right, @white 53%, rgba(104, 183, 56, 0.85) 53%), url("../../img/header-background-desktop.jpg");
       background-position: top right;
+    }
+
+    &--non-index::after {
+      display: none;
     }
   }
 }

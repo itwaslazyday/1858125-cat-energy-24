@@ -13,6 +13,10 @@
 
   @media (min-width: @desktop-width) {
     .font(20px, 30px, @white);
+
+    &--non-index {
+      color: @black;
+    }
   }
 }
 
@@ -23,25 +27,27 @@
     &:last-child {
       margin-right: 0;
     }
-
-    &--current a {
-      text-decoration: underline;
-      text-underline-offset: 10px;
-      text-decoration-color: @green;
-      text-decoration-thickness: 2px;
-
-      @media (min-width: @desktop-width) {
-        text-decoration-color: @white;
-      }
-    }
   }
 }
 
 .nav-list__link {
-  color: @black;
+  color: inherit;
   .link-reset;
 
-  @media (min-width: @desktop-width) {
-    color: @white;
+  &--current {
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-color: @green;
+    text-decoration-thickness: 2px;
+
+    @media (min-width: @desktop-width) {
+      text-decoration-color: @white;
+    }
+  }
+
+  &--non-index {
+    @media (min-width: @desktop-width) {
+      text-decoration-color: @green;
+    }
   }
 }
