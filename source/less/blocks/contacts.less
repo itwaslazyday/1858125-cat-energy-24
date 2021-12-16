@@ -1,9 +1,12 @@
 .contacts {
   position: relative;
+
+  &--background {
+    background-color: #f2f2f2;
+  }
 }
 
 .contacts__block {
-  background-color: @white;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -14,6 +17,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    background-color: @white;
     justify-content: space-evenly;
     position: absolute;
     min-width: 565px;

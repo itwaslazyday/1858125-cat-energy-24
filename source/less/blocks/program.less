@@ -1,4 +1,31 @@
+.program {
+  padding: 27px 0;
+  text-align: left;
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 82px;
+  }
+}
+
+.program__container {
+  @media (min-width: @tablet-width) {
+    padding: 0 70px;
+  }
+}
+
+.program__title {
+  margin-bottom: 36px;
+  text-align: left;
+}
+
 .program__text {
   .font(14px, 18px, @black);
   text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 39px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
