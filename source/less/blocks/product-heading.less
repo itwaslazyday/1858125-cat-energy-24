@@ -1,0 +1,28 @@
+.product-heading {
+  .font(16px, 20px, #222222);
+  font-weight: @font-weight-default;
+  text-transform: uppercase;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  &--position {
+    margin-bottom: 8px;
+    padding: 0;
+    color: #111111;
+
+    @media (min-width: @tablet-width) {
+      padding: 0 40px;
+      line-height: 22px;
+      margin-bottom: 23px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 0 15px;
+    }
+  }
+}

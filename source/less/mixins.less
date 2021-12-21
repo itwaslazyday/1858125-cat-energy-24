@@ -22,3 +22,11 @@
   line-height: @line-height;
   color: @font-color-arial;
 }
+
+.column-width(@gap, @col, @col-total) {
+  width: calc((100% - (@col-total - 1) * @gap) * @col / @col-total + (@col - 1) * @gap);
+}
+
+.column-width-gap(@gap, @col, @col-total) {
+  width: calc((100% - (@col-total - 1) * @gap) * @col / @col-total + (@col - 1) * @gap + @gap);
+}
