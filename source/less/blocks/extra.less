@@ -1,6 +1,3 @@
-@column-width: calc((100% - 3 * 80px) / 4);
-@table-width: calc(100% - 80px - @column-width);
-
 .extra {
   padding: 25px 0 35px;
 
@@ -24,6 +21,7 @@
 .extra__layout {
   @media (min-width: @desktop-width) {
     display: flex;
+    gap: 80px;
   }
 }
 
@@ -34,8 +32,7 @@
 
   @media (min-width: @desktop-width) {
     margin-bottom: 0;
-    width: @table-width;
-    margin-right: 80px;
+    .column-width(80px, 3, 4);
   }
 }
 
@@ -64,8 +61,10 @@
 
   @media (min-width: @desktop-width) {
     margin-bottom: 0;
-    flex-grow: 1;
-    width: calc(100% - ((100% - 160px) / 3));
+    // flex-grow: 1;
+    gap: 80px;
+    // .column-width(-160px, 2, 3);
+    .column-width-gap(80px, 2, 3);
   }
 }
 
@@ -80,8 +79,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    width: calc((100% - 160px) / 2);
-    margin-right: 80px;
+    .column-width(160px, 1, 2);
   }
 }
 
@@ -101,7 +99,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: calc(100% - ((100% - 160px) / 2) - 80px);
+    .column-width(0px, 1, 2);
   }
 }
 
@@ -137,7 +135,7 @@
 
     @media (min-width: @desktop-width) {
       margin-right: 0;
-      width: 245px;
+      width: calc(100% - 80px);
     }
   }
 }
@@ -148,7 +146,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: calc((100% - 160px) / 3);
+    .column-width(80px, 1, 3);
   }
 }
 
@@ -189,8 +187,8 @@
 
   @media (min-width: @desktop-width) {
     display: block;
-    width: @column-width;
     padding: 55px 20px 20px;
+    .column-width(80px, 1, 4);
   }
 }
 
