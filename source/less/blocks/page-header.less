@@ -4,13 +4,13 @@
 
   &::after {
     content: "";
-    display: block;
     width: 100%;
-    height: 84%;
+    height: 54%;
     position: absolute;
-    top: 81px;
+    top: 65px;
     right: 0;
-    background-image: linear-gradient(to bottom, rgba(104, 183, 56, 0.85) 63%, @white 63%), url("../../img/header-background-mobile.jpg");
+    background-color: #64a73c;
+    background-image: url("../img/header-background-mobile.jpg");
     background-position: top center;
     background-repeat: no-repeat;
     z-index: -1;
@@ -29,14 +29,34 @@
   @media (min-width: @desktop-width) {
     &::after {
       display: block;
+      width: 50%;
       height: 100%;
       top: 0;
-      background-image: linear-gradient(to right, @white 53%, rgba(104, 183, 56, 0.85) 53%), url("../../img/header-background-desktop.jpg");
-      background-position: top right;
+      background-color: #64a73c;
+      background-image: none;
+      z-index: -2;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      z-index: -1;
+      width: 50%;
+      height: 100%;
+      top: 0;
+      background-image: url("../img/header-background-desktop.jpg");
+      background-position: 0 50%;
+      background-repeat: no-repeat;
     }
 
     &--non-index::after {
       display: none;
     }
+
+    &--non-index::before {
+      display: none;
+    }
   }
 }
+
