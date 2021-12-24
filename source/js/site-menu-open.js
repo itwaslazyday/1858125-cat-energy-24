@@ -1,5 +1,5 @@
-let navHeader = document.querySelector('.header-nav');
-let navToggle = document.querySelector('.header-nav__toggle');
+const navHeader = document.querySelector('.header-nav');
+const navToggle = document.querySelector('.header-nav__toggle');
 
 navToggle.addEventListener('click', function() {
   if (navHeader.classList.contains('header-nav--closed')) {
