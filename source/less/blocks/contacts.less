@@ -8,7 +8,7 @@
   position: relative;
 
   @media (min-width: @tablet-width) {
-    padding: 0 70px;
+    padding: 0 68px;
   }
 
   @media (min-width: @desktop-width) {
@@ -19,8 +19,8 @@
 .contacts__block {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   min-height: 112px;
+  padding: 10px 0;
 
   @media (min-width: @tablet-width) {
     min-height: 198px;
@@ -28,10 +28,11 @@
 
   @media (min-width: @desktop-width) {
     background-color: @white;
-    justify-content: space-evenly;
+    width: 570px;
+    gap: 80px;
     position: absolute;
-    min-width: 565px;
     top: 120px;
+    padding: 10px 80px;
   }
 }
 
@@ -40,6 +41,7 @@
   .font(16px, 20px, #111111);
   text-transform: uppercase;
   text-align: left;
+  width: 50%;
 
   @media (min-width: @tablet-width) {
     .font(20px, 26px, @black);
@@ -50,11 +52,16 @@
   .arial(14px, 20px);
   font-style: normal;
   text-align: left;
+  width: 50%;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 20px;
     text-align: right;
+
+    span {
+      line-height: 50px;
+    }
   }
 
   @media (min-width: @desktop-width) {
