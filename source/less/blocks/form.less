@@ -6,7 +6,15 @@
   margin-bottom: 20px;
 
   &:last-of-type {
-    margin-bottom: 0;
+    margin-bottom: 34px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 54px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 60px;
+    }
   }
 }
 
@@ -32,6 +40,10 @@
   &:last-child {
     margin-bottom: 0;
   }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 20px;
+  }
 }
 
 .form__label {
@@ -52,10 +64,13 @@
   border: 1px solid #e7e7e7;
   height: 45px;
   flex-grow: 1;
+  padding: 0;
+  padding-left: 20px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
+    height: 52px;
   }
 }
 
@@ -82,7 +97,7 @@
 }
 
 .form__item {
-  margin-bottom: 13px;
+  margin-bottom: 12px;
 
   &:last-child {
     margin-bottom: 0;
@@ -152,13 +167,12 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 32px 100px;
+    gap: 32px 60px;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(4, 1fr);
     gap: 80px;
-    margin-bottom: 60px;
   }
 }
 
@@ -166,23 +180,28 @@
   @media (min-width: @tablet-width) {
     display: flex;
     align-items: center;
+    gap: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    gap: 80px;
   }
 }
 
 .form__button {
   padding: 10px 0;
   width: 100%;
+  margin-bottom: 21px;
 
   @media (min-width: @tablet-width) {
-    width: 282px;
+    .column-width(60px, 1, 2);
     font-size: 20px;
     padding: 16px 0;
-    margin-right: 60px;
+    margin-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
-    width: 568px;
-    margin-right: 80px;
+    .column-width(80px, 2, 4);
   }
 }
 
@@ -190,8 +209,15 @@
   .arial(14px, 16px);
   color: @black;
   text-align: center;
+  margin: 0;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
+    .column-width(60px, 1, 2);
+    text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    .column-width(80px, 1, 4);
   }
 }

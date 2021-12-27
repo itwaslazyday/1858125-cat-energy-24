@@ -1,10 +1,15 @@
 .nav-list {
-  display: none;
   .list-reset;
   .font(20px, 20px, @black);
   font-weight: @font-weight-bold;
+  width: 100%;
+  text-align: center;
+  background-color: @white;
+  border-top: 1px solid #e6e6e6;
 
   @media (min-width: @tablet-width) {
+    width: auto;
+    border: none;
     display: flex;
     flex-wrap: wrap;
     .font(18px, 24px, @black);
@@ -13,6 +18,7 @@
 
   @media (min-width: @desktop-width) {
     .font(20px, 30px, @white);
+    background: none;
 
     &--non-index {
       color: @black;
@@ -21,8 +27,13 @@
 }
 
 .nav-list__item {
+  padding: 22px 0 23px;
+  border-bottom: 1px solid #e6e6e6;
+
   @media (min-width: @tablet-width) {
+    padding: 0;
     margin-right: 34px;
+    border: none;
 
     &:last-child {
       margin-right: 0;

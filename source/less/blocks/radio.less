@@ -1,3 +1,40 @@
+.radio__input:checked + .radio__label::before {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 14px;
+  height: 14px;
+  background-color: #68b738;
+  border-radius: 50%;
+  content: "";
+  z-index: 1;
+
+  @media (min-width: @tablet-width) {
+    top: 11px;
+    left: 11px;
+    width: 18px;
+    height: 18px;
+  }
+}
+
 .radio__label {
   color: @black;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.radio__control {
+  width: 30px;
+  height: 30px;
+  background: @white;
+  border: 1px solid #cdcdcd;
+  border-radius: 50%;
+  margin-right: 15px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 20px;
+    width: 40px;
+    height: 40px;
+  }
 }

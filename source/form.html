@@ -9,19 +9,13 @@
   <body class="page__body">
     <header class="page-header page-header--non-index">
       <div class="container">
-        <nav class="header-nav">
+        <nav class="header-nav header-nav--closed">
           <a class="header-nav__logo-link" href="index.html">
             <img class="logo-image header-nav__logo-position" src="img/logo-image.svg" width="34" height="38" alt="Логотип магазина Cat Energy">
             <img class="brand-image" src="img/brand-image.svg" width="101" height="18" alt="Бренд магазина Cat Energy">
           </a>
-          <button class="header-nav__toggle" type="button" aria-label="Показать меню сайта.">
-            <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <line y1="1.25" x2="24" y2="1.25" stroke="black" stroke-width="1.5"/>
-              <line y1="9.25" x2="24" y2="9.25" stroke="black" stroke-width="1.5"/>
-              <line y1="17.25" x2="24" y2="17.25" stroke="black" stroke-width="1.5"/>
-            </svg>
-          </button>
-          <ul class="nav-list nav-list--non-index">
+          <button class="header-nav__toggle" type="button" aria-label="Показать меню сайта."></button>
+          <ul class="nav-list nav-list--non-index header-nav__list">
             <li class="nav-list__item">
               <a class="nav-list__link" href="index.html">Главная</a>
             </li>
@@ -61,16 +55,25 @@
                 </ul>
                 <ul class="form__list-radio">
                   <li class="form__item radio">
-                    <input class="radio__input" type="radio" name="program-type" id="slim" value="program-slim" checked>
-                    <label class="form__label radio__label" for="slim">Похудение</label>
+                    <input class="radio__input visually-hidden" type="radio" name="program-type" id="slim" value="program-slim" checked>
+                    <label class="form__label radio__label" for="slim">
+                      <span class="radio__control"></span>
+                      Похудение
+                    </label>
                   </li>
                   <li class="form__item radio">
-                    <input class="radio__input" type="radio" name="program-type" id="pro" value="program-pro">
-                    <label class="form__label radio__label" for="pro">Набор массы</label>
+                    <input class="radio__input visually-hidden" type="radio" name="program-type" id="pro" value="program-pro">
+                    <label class="form__label radio__label" for="pro">
+                      <span class="radio__control"></span>
+                      Набор массы
+                    </label>
                   </li>
                   <li class="form__item radio">
-                    <input class="radio__input" type="radio" name="program-type" id="help" value="program-help">
-                    <label class="form__label radio__label" for="help">Не знаю (Нужен ваш совет)</label>
+                    <input class="radio__input visually-hidden" type="radio" name="program-type" id="help" value="program-help">
+                    <label class="form__label radio__label" for="help">
+                      <span class="radio__control"></span>
+                      Не знаю (Нужен ваш совет)
+                    </label>
                   </li>
                 </ul>
               </div>
@@ -96,20 +99,32 @@
               <legend class="form__title">Дополнительно</legend>
                 <ul class="form__list-checkbox">
                   <li class="form__item checkbox">
-                    <input class="checkbox__input" type="checkbox" name="extra-sugar" id="sugar" checked>
-                    <label class="form__label checkbox__label" for="sugar">Сахарозаменитель</label>
+                    <input class="checkbox__input visually-hidden" type="checkbox" name="extra-sugar" id="sugar" checked>
+                    <label class="form__label checkbox__label" for="sugar">
+                      <span class="checkbox__control"></span>
+                      Сахарозаменитель
+                    </label>
                   </li>
                   <li class="form__item checkbox">
-                    <input class="checkbox__input" type="checkbox" name="extra-water" id="water">
-                    <label class="form__label checkbox__label" for="water">Питьевая вода</label>
+                    <input class="checkbox__input visually-hidden" type="checkbox" name="extra-water" id="water">
+                    <label class="form__label checkbox__label" for="water">
+                      <span class="checkbox__control"></span>
+                      Питьевая вода
+                    </label>
                   </li>
                   <li class="form__item checkbox">
-                    <input class="checkbox__input" type="checkbox" name="extra-milk" id="milk">
-                    <label class="form__label checkbox__label" for="milk">Молоко</label>
+                    <input class="checkbox__input visually-hidden" type="checkbox" name="extra-milk" id="milk">
+                    <label class="form__label checkbox__label" for="milk">
+                      <span class="checkbox__control"></span>
+                      Молоко
+                    </label>
                   </li>
                   <li class="form__item checkbox">
-                    <input class="checkbox__input" type="checkbox" name="extra-vitamins" id="vitamins">
-                    <label class="form__label checkbox__label" for="vitamins">Витамины</label>
+                    <input class="checkbox__input visually-hidden" type="checkbox" name="extra-vitamins" id="vitamins">
+                    <label class="form__label checkbox__label" for="vitamins">
+                      <span class="checkbox__control"></span>
+                      Витамины
+                    </label>
                   </li>
                 </ul>
             </fieldset>
@@ -126,10 +141,15 @@
         <div class="container contacts__container">
           <div class="contacts__block">
             <p class="contacts__text">Приглашаем<br>к сотрудничеству<br>дилеров!</p>
-            <address class="contacts__address">ул. Большая<br>Конюшенная, д. 19/8<br>Санкт-Петербург</address>
+            <address class="contacts__address">ул. Большая<br>Конюшенная, д. 19/8<br><span>Санкт-Петербург</span></address>
           </div>
         </div>
-        <img class="contacts__map" src="img/contacts-map.jpg" width="320" height="362" alt="Карта с раположением магазина">
+        <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037020440197!2d30.32190379010145!3d59.93871789569718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1640153148670!5m2!1sru!2sru"
+          width="320"
+          height="362"
+          allowfullscreen
+          title="Ждем вас по адресу: ул. Большая Конюшенная, д. 19/8">
+        </iframe>
       </section>
     </main>
 
@@ -175,5 +195,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="js/site-menu-open.js"></script>
   </body>
 </html>
