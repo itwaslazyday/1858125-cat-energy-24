@@ -1,28 +1,6 @@
 .page-header {
   position: relative;
 
-  &::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 302px;
-    position: absolute;
-    top: 65px;
-    background-color: #64a73c;
-    background-image: url("../img/header-background-mobile.jpg");
-    background-position: top center;
-    background-repeat: no-repeat;
-    z-index: -1;
-
-    @media (min-width: @tablet-width) {
-      display: none;
-    }
-  }
-
-  &--non-index::after {
-    display: none;
-  }
-
   @media (min-width: @desktop-width) {
     background-image: url("../img/header-background-desktop.jpg"), linear-gradient(to right, @white 50%, #64a73c 50%);
     background-position: right 26%;

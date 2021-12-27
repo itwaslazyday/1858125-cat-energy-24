@@ -11,16 +11,36 @@
     align-items: flex-start;
     min-height: 850px;
     padding: 30px 90px;
-
-    &::after {
-      display: none;
-    }
   }
 
   @media (min-width: @desktop-width) {
     width: 50%;
     padding: 0 80px 200px;
     min-height: auto;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100vw;
+    height: 302px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #64a73c;
+    background-image: url("../img/header-background-mobile.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    z-index: -1;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+
+  &--non-index::after {
+    display: none;
   }
 }
 
