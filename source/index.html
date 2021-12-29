@@ -96,6 +96,7 @@
             </div>
           </div>
           <div class="cat-slider">
+            <!-- .cat-slider--after - состояние слайдера "после" -->
             <ul class="cat-slider__list">
               <li class="cat-slider__item cat-slider__item--before">
                 <img class="cat-slider__image cat-slider__image--before" src="img/cat-slider-fat.png" width="677" height="520" alt="Состояние кошки до начала правильного питания">
@@ -105,9 +106,12 @@
               </li>
             </ul>
             <form class="cat-slider__form">
-              <button class="cat-slider__button">Было</button>
-              <input class="cat-slider__range" type="range" name="cat-range">
-              <button class="cat-slider__button">Стало</button>
+              <button class="cat-slider__button cat-slider__button--before" type="button">Было</button>
+              <div class="cat-slider__progress-bar">
+                <input class="cat-slider__range" type="range" name="cat-range">
+                <div class="cat-slider__progress-toggle"></div>
+              </div>
+              <button class="cat-slider__button cat-slider__button--after" type="button">Стало</button>
             </form>
           </div>
         </div>
@@ -174,5 +178,6 @@
     </footer>
 
     <script src="js/site-menu-open.js"></script>
+    <script src="js/cat-slider-toggles.js"></script>
   </body>
 </html>

@@ -12,3 +12,11 @@ navToggle.addEventListener('click', function() {
     navHeader.classList.remove('header-nav--opened');
   }
 });
+
+window.addEventListener('click', function(e) {
+  const target = e.target;
+  if (!target.closest('.header-nav__toggle') && !target.closest('.header-nav__list')) {
+    navHeader.classList.remove('header-nav--opened');
+    navHeader.classList.add('header-nav--closed');
+  }
+});
