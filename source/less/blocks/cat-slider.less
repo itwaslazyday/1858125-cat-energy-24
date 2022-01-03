@@ -14,22 +14,12 @@
       transition: 0.5s ease-out;
     }
 
-    .cat-slider__item {
-      width: auto;
+    .cat-slider__item--after {
+      width: 100%;
     }
 
     .cat-slider__item--before {
-      display: none;
-    }
-
-    .cat-slider__item--after {
-      display: block;
-    }
-
-    .cat-slider__image--after {
-      @media (min-width: @tablet-width) {
-        object-position: 50% 50%;
-      }
+      width: 0%;
     }
   }
 }
@@ -40,6 +30,7 @@
   margin-bottom: 15px;
 
   @media (min-width: @tablet-width) {
+    width: 100%;
     justify-content: center;
     margin-bottom: 25px;
   }
@@ -47,22 +38,18 @@
 
 .cat-slider__item {
   &--before {
-    display: block;
+    width: 100%;
   }
 
   &--after {
-    display: none;
-
-    @media (min-width: @tablet-width) {
-      // display: block;
-      display: none;
-    }
+    width: 0%;
   }
 
   @media (min-width: @tablet-width) {
-    // width: 296px;
-    width: auto;
     overflow: hidden;
+    position: relative;
+    width: 50%;
+    height: 511px;
   }
 }
 
@@ -73,13 +60,30 @@
 
   @media (min-width: @tablet-width) {
     max-width: none;
-    width: 592px;
-    height: 511px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: auto;
+    height: 100%;
+
+    &--before {
+      object-position: 50px 0;
+    }
+
+    &--after {
+      left: auto;
+      right: 0;
+      object-position: -50px 0;
+    }
   }
 
-  &--after {
-    @media (min-width: @tablet-width) {
-      object-position: -250px 0;
+  @media (min-width: @desktop-width) {
+    &--before {
+      object-position: 2px 0;
+    }
+
+    &--after {
+      object-position: -2px 0;
     }
   }
 }
@@ -134,7 +138,6 @@
   display: none;
 
   @media (min-width: @tablet-width) {
-    position: relative;
     display: block;
     margin: 0;
     appearance: none;
@@ -145,6 +148,17 @@
     border-radius: 6px;
 
     &::-webkit-slider-thumb {
+      appearance: none;
+      width: 34px;
+      height: 34px;
+      border: 1px solid #cecece;
+      border-radius: 50%;
+      box-shadow: 0 2px 2px 0 #d6d6d6;
+      background: radial-gradient(circle closest-side, #68b738 4px, @white 4px);
+      cursor: pointer;
+    }
+
+    &::-moz-range-thumb {
       appearance: none;
       width: 34px;
       height: 34px;

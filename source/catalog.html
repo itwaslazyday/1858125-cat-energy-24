@@ -11,8 +11,12 @@
       <div class="container">
         <nav class="header-nav header-nav--closed">
           <a class="header-nav__logo-link" href="index.html">
-            <img class="logo-image header-nav__logo-position" src="img/logo-image.svg" width="34" height="38" alt="Логотип магазина Cat Energy">
-            <img class="brand-image" src="img/brand-image.svg" width="101" height="18" alt="Бренд магазина Cat Energy">
+            <picture>
+              <source media="(min-width: 1280px)" srcset="img/logo-image-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-image-tablet.svg">
+              <img class="logo-image header-nav__logo-position" src="img/logo-image-mobile.svg" width="34" height="38" alt="Логотип магазина Cat Energy">
+              <img class="brand-image" src="img/brand-image.svg" width="101" height="18" alt="Бренд магазина Cat Energy">
+            </picture>
           </a>
           <button class="header-nav__toggle" type="button" aria-label="Показать меню сайта."></button>
           <ul class="nav-list nav-list--non-index header-nav__list">
@@ -328,7 +332,7 @@
       <div class="container page-footer__container">
         <div class="footer-logo page-footer__logo">
           <a class="footer-logo__link">
-            <img class="brand-image" src="img/footer-brand-logo.svg" width="128" height="24" alt="Бренд магазина Cat Energy">
+            <img class="brand-image brand-image--visibility" src="img/footer-brand-logo.svg" width="128" height="24" alt="Бренд магазина Cat Energy">
           </a>
         </div>
         <div class="social page-footer__social">

@@ -14,6 +14,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    position: static;
     width: 50%;
     padding: 58px 80px 30px;
     min-height: 552px;
@@ -81,14 +82,19 @@
   @media (min-width: @tablet-width) {
     position: absolute;
     z-index: -1;
-    top: 200px;
-    left: 200px;
+    top: 230px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 709px;
+    height: 609px;
   }
 
   @media (min-width: @desktop-width) {
     z-index: 1;
-    top: 50px;
-    left: 500px;
+    top: 140px;
+    left: calc(50% + 114px);
+    width: 552px;
+    height: 499px;
   }
 }
 

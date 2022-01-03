@@ -113,6 +113,10 @@
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
+
+    br {
+      display: none;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -122,11 +126,6 @@
   span {
     position: relative;
     display: inline-block;
-    max-width: 181px;
-
-    @media (min-width: @tablet-width) {
-      max-width: 100%;
-    }
 
     &::before {
       content: "";
