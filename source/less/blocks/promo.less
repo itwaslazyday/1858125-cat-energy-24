@@ -30,10 +30,15 @@
     left: 50%;
     transform: translateX(-50%);
     background-color: #64a73c;
-    background-image: url("../img/header-background-mobile.jpg");
+    background-image: url("../img/header-background-mobile@1x.jpg");
     background-position: top center;
     background-repeat: no-repeat;
     z-index: -1;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/header-background-mobile@2x.jpg");
+      background-size: contain;
+    }
 
     @media (min-width: @tablet-width) {
       display: none;
