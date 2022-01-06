@@ -13,10 +13,18 @@ navToggle.addEventListener('click', function() {
   }
 });
 
-window.addEventListener('click', function(e) {
-  const target = e.target;
+navToggle.addEventListener('click', func);
+
+function func() {
+  window.addEventListener('click', handleClick);
+};
+
+function handleClick(event) {
+  const target = event.target;
   if (!target.closest('.header-nav__toggle') && !target.closest('.header-nav__list')) {
     navHeader.classList.remove('header-nav--opened');
     navHeader.classList.add('header-nav--closed');
+    window.removeEventListener('click', handleClick);
+    console.log('Обработчик событий удален');
   }
-});
+};

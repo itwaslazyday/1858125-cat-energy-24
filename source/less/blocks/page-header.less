@@ -6,13 +6,17 @@
     background-position: right 50%;
     background-repeat: no-repeat;
 
+    &--non-index {
+      background: none;
+    }
+
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background-image: url("../img/header-background-desktop@2x.jpg"), linear-gradient(to right, @white 50%, #64a73c 50%);
       background-size: contain;
-    }
 
-    &--non-index {
-      background: none;
+      &--non-index {
+        background: none;
+      }
     }
   }
 }

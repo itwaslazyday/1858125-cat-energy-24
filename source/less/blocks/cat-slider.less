@@ -31,25 +31,43 @@
 
   @media (min-width: @tablet-width) {
     width: 100%;
-    justify-content: center;
     margin-bottom: 25px;
+    position: relative;
   }
 }
 
 .cat-slider__item {
+  @media (min-width: @tablet-width) {
+    overflow: hidden;
+    height: 511px;
+  }
+
   &--before {
     width: 100%;
+
+    @media (min-width: @tablet-width) {
+      width: 50%;
+      z-index: 1;
+      background-image: linear-gradient(to top, #eaeaea 295px, #ffffff 295px);
+      background-repeat: no-repeat;
+    }
+
+    @media (min-width: @desktop-width) {
+      background-image: linear-gradient(to bottom, #ffffff 200px, #f2f2f2 200px);
+      background-repeat: no-repeat;
+    }
   }
 
   &--after {
-    width: 0%;
-  }
+    width: 0;
 
-  @media (min-width: @tablet-width) {
-    overflow: hidden;
-    position: relative;
-    width: 50%;
-    height: 511px;
+    @media (min-width: @tablet-width) {
+      width: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 0;
+    }
   }
 }
 
@@ -60,9 +78,6 @@
 
   @media (min-width: @tablet-width) {
     max-width: none;
-    position: absolute;
-    left: 0;
-    top: 0;
     width: auto;
     height: 100%;
 
@@ -71,9 +86,11 @@
     }
 
     &--after {
-      left: auto;
+      position: absolute;
+      top: 0;
       right: 0;
-      object-position: -50px 0;
+      z-index: -1;
+      object-position: -55px 0;
     }
   }
 
@@ -83,7 +100,7 @@
     }
 
     &--after {
-      object-position: -2px 0;
+      object-position: -10px 0;
     }
   }
 }

@@ -22,7 +22,7 @@ if (pageWidth >= tabletWidth) {
 
   range.addEventListener('input', function() {
     imgBefore.style.width = (100 - range.value) + '%';
-    imgAfter.style.width = range.value + '%';
+    // imgAfter.style.width = range.value + '%';
   })
 
   buttonBefore.addEventListener('click', function () {

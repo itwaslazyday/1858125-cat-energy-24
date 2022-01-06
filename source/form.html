@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Cat Energy: каталог продукции</title>
     <link href="css/style.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" sizes="16x16 32x32" type="image/vnd.microsoft.icon">
+    <link rel="shortcut icon" href="img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="shortcut icon" href="img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="img/favicons/favicon.svg" sizes="any" type="image/svg+xml">
+    <link rel="manifest" href="manifest.json">
+    <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#68b738">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+    <meta name="apple-mobile-web-app-title" content="Cat Energy">
   </head>
   <body class="page__body">
     <header class="page-header page-header--non-index">
@@ -89,13 +97,13 @@
                 <span>Контактные данные<br> (владельца кота)</span>
               </legend>
               <ul class="form__human-list">
-                <li class="form__human-item">
+                <li class="form__human-item form__human-item--email">
                   <label class="form__label" for="email">E-mail:*</label>
-                  <input class="form__input" type="email" name="e-mail" id="email" placeholder="kuklachev@gmail.com" required>
+                  <input class="form__input form__input--icon" type="email" name="e-mail" id="email" placeholder="kuklachev@gmail.com" required>
                 </li>
-                <li class="form__human-item">
+                <li class="form__human-item form__human-item--phone">
                   <label class="form__label" for="tel">Телефон:*</label>
-                  <input class="form__input" type="tel" name="phone" id="tel" placeholder="8 (960) 900-60-90" required>
+                  <input class="form__input form__input--icon" type="tel" name="phone" id="tel" placeholder="8 (960) 900-60-90" required>
                 </li>
               </ul>
             </fieldset>
@@ -103,7 +111,7 @@
               <legend class="form__title">
                 <span>Комментарий</span>
               </legend>
-              <textarea class="form__textarea" name="cat-habits">Расскажите обо всех повадках кота</textarea>
+              <textarea class="form__textarea" name="cat-habits" placeholder="Расскажите обо всех повадках кота"></textarea>
             </fieldset>
             <fieldset class="form__fieldset">
               <legend class="form__title">
