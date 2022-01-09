@@ -35,6 +35,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 10px;
   margin-bottom: 13px;
 
   &:last-child {
@@ -49,7 +50,8 @@
 .form__label {
   .font(16px, 18px, @gray);
   text-transform: uppercase;
-  margin-right: 10px;
+  flex-shrink: 0;
+  max-width: 50%;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -64,8 +66,8 @@
   border: 1px solid #e7e7e7;
   height: 45px;
   flex-grow: 1;
-  padding: 0;
-  padding-left: 15px;
+  padding: 0 15px 0;
+  width: 100%;
 
   &--icon {
     padding-right: 45px;
@@ -159,7 +161,7 @@
     height: 2px;
     left: 50%;
     top: 0.7em;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     position: absolute;
     background-color: #68b738;
     z-index: -2;
@@ -179,6 +181,7 @@
 .form__human-item {
   display: flex;
   justify-content: space-between;
+  gap: 10px;
   align-items: center;
   margin-bottom: 13px;
   position: relative;
