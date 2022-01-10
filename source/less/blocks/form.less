@@ -89,6 +89,7 @@
   .font(16px, 18px, @gray);
   font-family: @font-default;
   text-transform: uppercase;
+  opacity: 1;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -233,22 +234,24 @@
   height: 150px;
   text-transform: uppercase;
   text-align: left;
+  resize: none;
+  padding-left: 15px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
+    padding-left: 20px;
   }
 
   &::placeholder {
     .font(16px, 18px, @gray);
     font-family: @font-default;
     text-transform: uppercase;
-    padding-left: 15px;
+    opacity: 1;
 
     @media (min-width: @tablet-width) {
       font-size: 20px;
       line-height: 30px;
-      padding-left: 20px;
     }
   }
 }
