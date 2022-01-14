@@ -115,6 +115,27 @@
 .extra__title-link {
   .link-reset;
   color: inherit;
+
+  &[href]:active {
+    opacity: 0.3;
+    outline: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    &[href]:hover {
+      opacity: 0.6;
+    }
+
+    &[href]:active {
+      opacity: 0.3;
+      outline: none;
+    }
+
+    &[href]:focus-visible {
+      border-radius: 3px;
+      .outline(3px, @green, 5px);
+    }
+  }
 }
 
 .extra__table {
@@ -186,6 +207,7 @@
   background-image: image-set(url("../img/extra-background-mobile@1x.jpg") 1x, url("../img/extra-background-mobile@2x.jpg") 2x);
   background-repeat: no-repeat;
   background-position: center center;
+  background-size: cover;
 
   &::before {
     content: "";

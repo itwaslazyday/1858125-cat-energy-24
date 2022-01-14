@@ -1,6 +1,6 @@
 .button {
   display: block;
-  padding: 7px 44px;
+  padding: 11px;
   text-align: center;
   text-transform: uppercase;
   color: @white;
@@ -9,4 +9,19 @@
   background-color: @green;
   font-family: @font-default;
   .font(16px, 20px, @white);
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    outline: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    &:hover {
+      background-color: #5eaa2f;
+    }
+
+    &:focus-visible {
+      .outline(3px, #756257, 0);
+    }
+  }
 }
