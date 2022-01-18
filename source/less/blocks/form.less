@@ -108,10 +108,10 @@
   }
 
   &:focus-visible {
-    .outline(3px, @green, 0);
+    .outline(2px, #444444, -2px);
   }
 
-  &:focus-visible:not(.form__input--error) + .form__icon {
+  &:focus-visible + .form__icon {
     stroke: @green;
   }
 
@@ -281,6 +281,12 @@
   &:last-child {
     margin-bottom: 0;
 
+    @media (min-width: @tablet-width) {
+      .form__input {
+        padding-left: 14px;
+      }
+    }
+
     @media (min-width: @desktop-width) {
       margin-right: 0;
     }
@@ -300,8 +306,12 @@
     top: 16px;
 
     @media (min-width: @tablet-width) {
-      right: 18px;
+      right: 14px;
       top: 19px;
+    }
+
+    @media (min-width: @desktop-width) {
+      right: 18px;
     }
   }
 
@@ -310,6 +320,10 @@
     top: 13px;
 
     @media (min-width: @tablet-width) {
+      top: 15px;
+    }
+
+    @media (min-width: @desktop-width) {
       right: 17px;
       top: 15px;
     }
@@ -361,7 +375,7 @@
   }
 
   &:focus-visible {
-    .outline(3px, @green, 0);
+    .outline(2px, #444444, -2px);
   }
 
   &:not(:placeholder-shown) {
