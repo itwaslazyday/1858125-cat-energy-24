@@ -27,6 +27,23 @@
         left: 0;
       }
     }
+
+    &--no-js {
+      flex-direction: column;
+      justify-content: flex-start;
+      padding-bottom: 0;
+      align-items: stretch;
+
+      .header-nav__toggle {
+        display: none;
+      }
+
+      .header-nav__list {
+        display: block;
+        width: 100vw;
+        transform: translateX(calc(-1 * (100vw - 280px) / 2));
+      }
+    }
   }
 
   @media (min-width: @tablet-width) {

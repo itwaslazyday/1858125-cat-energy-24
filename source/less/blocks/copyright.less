@@ -3,8 +3,37 @@
   justify-content: space-between;
   align-items: center;
 
+  & svg {
+    fill: #666666;
+  }
+
   @media (min-width: @tablet-width) {
     justify-content: flex-end;
     gap: 22px;
+  }
+
+  &[href]:active {
+    opacity: 0.3;
+    outline: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    &[href]:hover svg {
+      fill: @green;
+    }
+
+    &[href]:active {
+      opacity: 0.3;
+      outline: none;
+    }
+
+    &[href]:focus-visible {
+      border-radius: 1px;
+      .outline(3px, @green, 8px);
+    }
+
+    &[href]:focus-visible svg {
+      fill: @green;
+    }
   }
 }

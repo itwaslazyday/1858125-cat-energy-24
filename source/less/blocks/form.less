@@ -92,13 +92,18 @@
     @media (min-width: @tablet-width) {
       padding-right: 55px;
     }
+
+    svg {
+      stroke: #222222;
+      fill: #222222;
+    }
   }
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
     height: 52px;
-    padding-left: 20px;
+    padding-left: 17px;
   }
 
   @media (min-width: @desktop-width) {
@@ -113,6 +118,7 @@
 
   &:focus-visible + .form__icon {
     stroke: @green;
+    fill: @green;
   }
 
   &:not(:placeholder-shown):not(.form__input--error) {
@@ -125,6 +131,7 @@
 
   &--error + .form__icon {
     stroke: #ff8282;
+    fill: #ff8282;
   }
 }
 
@@ -280,12 +287,6 @@
 
   &:last-child {
     margin-bottom: 0;
-
-    @media (min-width: @tablet-width) {
-      .form__input {
-        padding-left: 14px;
-      }
-    }
 
     @media (min-width: @desktop-width) {
       margin-right: 0;

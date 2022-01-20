@@ -10,17 +10,19 @@
   }
 
   &--after {
-    .cat-slider__progress-toggle {
-      transform: translateX(100%);
-      transition: 0.5s ease-out;
-    }
+    @media (max-width: @mobile-width-only) {
+      .cat-slider__progress-toggle {
+        transform: translateX(100%);
+        transition: 0.5s ease-out;
+      }
 
-    .cat-slider__item--after {
-      width: 100%;
-    }
+      .cat-slider__item--after {
+        width: 100%;
+      }
 
-    .cat-slider__item--before {
-      width: 0%;
+      .cat-slider__item--before {
+        width: 0%;
+      }
     }
   }
 }
