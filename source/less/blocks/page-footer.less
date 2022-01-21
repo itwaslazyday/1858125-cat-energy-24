@@ -15,7 +15,7 @@
 
 .page-footer__logo {
   text-align: center;
-  padding: 39px 0 32px;
+  padding: 39px 0 28px;
 
   @media (min-width: @tablet-width) {
     width: 33.34%;
@@ -24,8 +24,33 @@
   }
 }
 
+.page-footer__logo-link {
+  display: inline-block;
+
+  &[href]:active {
+    opacity: 0.6;
+    outline: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    &[href]:hover {
+      opacity: 0.8;
+    }
+
+    &[href]:active {
+      opacity: 0.6;
+      outline: none;
+    }
+
+    &[href]:focus-visible {
+      border-radius: 1px;
+      .outline(3px, @green, 10px);
+    }
+  }
+}
+
 .page-footer__social {
-  padding: 20px 0;
+  padding: 20px 0 17px;
   border-top: 1px solid #d9d9d9;
 
   @media (min-width: @tablet-width) {
@@ -40,6 +65,8 @@
   border-top: 1px solid #d9d9d9;
 
   @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: flex-end;
     width: 33.34%;
     border: none;
     padding: 0;

@@ -1,4 +1,4 @@
-.radio__input:checked + .radio__label::before {
+.radio__input:checked + .radio__label::after {
   position: absolute;
   top: 8px;
   left: 8px;
@@ -7,7 +7,7 @@
   background-color: #68b738;
   border-radius: 50%;
   content: "";
-  z-index: 1;
+  z-index: 2;
 
   @media (min-width: @tablet-width) {
     top: 11px;
@@ -17,29 +17,58 @@
   }
 }
 
+.radio__input[disabled] + .radio__label {
+  opacity: 0.3;
+}
+
+.radio__input:focus-visible + .radio__label::before {
+  @media (min-width: @desktop-width) {
+    .outline(3px, @green, 0);
+  }
+}
+
+.radio__input:focus + .radio__label::before {
+  @media (min-width: @desktop-width) {
+    border: 1px solid #bababa;
+  }
+}
+
 .radio__label {
-  color: @black;
   position: relative;
+  color: @black;
+  margin-right: 0;
   display: flex;
   align-items: center;
   gap: 15px;
-  margin-right: 0;
   max-width: 100%;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     gap: 20px;
   }
-}
 
-.radio__control {
-  min-width: 30px;
-  height: 30px;
-  background: @white;
-  border: 1px solid #cdcdcd;
-  border-radius: 50%;
+  &::before {
+    content: "";
+    display: block;
+    min-width: 30px;
+    height: 30px;
+    background: @white;
+    border: 1px solid #cdcdcd;
+    border-radius: 50%;
 
-  @media (min-width: @tablet-width) {
-    min-width: 40px;
-    height: 40px;
+    @media (min-width: @tablet-width) {
+      min-width: 40px;
+      height: 40px;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: @desktop-width) {
+    &:hover::before {
+      border: 1px solid #bababa;
+    }
   }
 }

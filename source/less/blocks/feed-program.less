@@ -32,7 +32,7 @@
   @media (min-width: @tablet-width) {
     text-align: left;
     margin-bottom: 30px;
-    padding: 77px 300px 57px 53px;
+    padding: 77px 315px 57px 53px;
   }
 
   @media (min-width: @desktop-width) {
@@ -64,7 +64,7 @@
       height: 211px;
       width: 200px;
       left: auto;
-      right: 64px;
+      right: 62px;
       top: 81px;
     }
 
@@ -98,7 +98,7 @@
       width: 134px;
       left: 33px;
       right: auto;
-      top: 47px;
+      top: 45px;
     }
   }
 }
@@ -129,16 +129,37 @@
 
   &::after {
     position: absolute;
-    bottom: 7px;
-    left: 100px;
+    bottom: 5px;
+    left: calc(100% + 15px);
     content: "";
     background-image: url("../img/feed-program-arrow.svg");
     width: 24px;
-    height: 11px;
+    height: 12px;
 
     @media (min-width: @tablet-width) {
-      left: 125px;
+      left: calc(100% + 24px);
       bottom: 9px;
+    }
+
+    @media (min-width: @desktop-width) {
+      left: calc(100% + 28px);
+    }
+  }
+
+  &[href]:active {
+    opacity: 0.3;
+    outline: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    &[href]:hover::after {
+      width: 32px;
+      transition: width 0.4s;
+    }
+
+    &[href]:focus-visible {
+      border-radius: 1px;
+      .outline(3px, @green, 7px);
     }
   }
 }

@@ -32,7 +32,6 @@ if (pageWidth >= tabletWidth) {
   })
 
   buttonAfter.addEventListener('click', function () {
-    imgBefore.style.width = '0%';
     imgAfter.style.width = '100%';
     range.value = 100;
   })

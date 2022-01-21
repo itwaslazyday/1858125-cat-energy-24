@@ -1,4 +1,4 @@
-.checkbox__input:checked + .checkbox__label::before {
+.checkbox__input:checked + .checkbox__label::after {
   position: absolute;
   left: 0;
   background-image: url("data:image/svg+xml,%3Csvg width='24' height='19' viewBox='0 0 24 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 15.499L1.4 6.90101L0 8.48485L9 18.6667L24 1.69697L22.6 0L9 15.499Z' fill='%2368B738'/%3E%3C/svg%3E%0A");
@@ -16,6 +16,22 @@
   }
 }
 
+.checkbox__input[disabled] + .checkbox__label {
+  opacity: 0.3;
+}
+
+.checkbox__input:focus-visible + .checkbox__label::before {
+  @media (min-width: @desktop-width) {
+    .outline(3px, @green, 0);
+  }
+}
+
+.checkbox__input:focus + .checkbox__label::before {
+  @media (min-width: @desktop-width) {
+    border: 1px solid #bababa;
+  }
+}
+
 .checkbox__label {
   color: @black;
   position: relative;
@@ -24,20 +40,33 @@
   margin-right: 0;
   gap: 16px;
   max-width: 100%;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    display: block;
+    min-width: 30px;
+    height: 30px;
+    background: @white;
+    border: 1px solid #cdcdcd;
+
+    @media (min-width: @tablet-width) {
+      min-width: 40px;
+      height: 40px;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     gap: 19px;
   }
-}
 
-.checkbox__control {
-  min-width: 30px;
-  height: 30px;
-  background: @white;
-  border: 1px solid #cdcdcd;
+  @media (min-width: @desktop-width) {
+    &:hover::before {
+      border: 1px solid #bababa;
+    }
+  }
 
-  @media (min-width: @tablet-width) {
-    min-width: 40px;
-    height: 40px;
+  &:active {
+    opacity: 0.3;
   }
 }
