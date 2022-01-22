@@ -1,9 +1,9 @@
 const navHeader = document.querySelector('.header-nav');
 const navToggle = document.querySelector('.header-nav__toggle');
 
-// navHeader.classList.remove('header-nav--no-js');
-// console.log('JS загружен, класс &--no-js удален у блока навигации');
-// navHeader.classList.add('header-nav--closed');
+navHeader.classList.remove('header-nav--no-js');
+console.log('JS загружен, класс &--no-js удален у блока навигации');
+navHeader.classList.add('header-nav--closed');
 
 navToggle.addEventListener('click', function() {
   if (navHeader.classList.contains('header-nav--closed')) {

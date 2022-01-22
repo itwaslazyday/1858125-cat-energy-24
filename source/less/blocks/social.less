@@ -7,15 +7,8 @@
 }
 
 .social__item {
-  margin-right: 36px;
-
-  @media (min-width: @tablet-width) {
-    margin-right: 23px;
-  }
-
-  &:last-child {
-    margin-right: 0;
-  }
+  width: 55px;
+  text-align: center;
 }
 
 .social__link {
@@ -39,12 +32,19 @@
 
     &--instagram svg {
       width: 30px;
-      height: 24px;
+      height: 23px;
+      margin-top: 2px;
+      margin-left: -4px;
+
+      @media (min-width: @desktop-width) {
+        margin: 0;
+      }
     }
 
     &--facebook svg {
-      width: 30px;
+      width: 37px;
       height: 28px;
+      margin-top: -2px;
     }
   }
 
