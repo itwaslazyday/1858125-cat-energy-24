@@ -57,10 +57,6 @@
   color: inherit;
   .link-reset;
 
-  @media (min-width: @tablet-width) {
-    border-radius: 1px;
-  }
-
   &--current {
     text-decoration: underline;
     text-underline-offset: 13px;
@@ -79,7 +75,9 @@
     }
   }
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
+    border-radius: 1px;
+
     &[href]:hover {
       opacity: 0.6;
     }

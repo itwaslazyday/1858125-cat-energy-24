@@ -123,10 +123,6 @@
   .font(16px, 16px, @black);
   .link-reset;
 
-  @media (min-width: @tablet-width) {
-    .font(20px, 30px, @black);
-  }
-
   &::after {
     position: absolute;
     bottom: 5px;
@@ -151,7 +147,9 @@
     outline: none;
   }
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
+    .font(20px, 30px, @black);
+
     &[href]:hover::after {
       width: 32px;
       transition: width 0.4s;

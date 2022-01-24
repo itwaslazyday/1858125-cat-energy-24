@@ -22,13 +22,13 @@
 }
 
 .radio__input:focus-visible + .radio__label::before {
-  @media (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     .outline(3px, @green, 0);
   }
 }
 
 .radio__input:focus + .radio__label::before {
-  @media (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     border: 1px solid #bababa;
   }
 }
@@ -45,6 +45,10 @@
 
   @media (min-width: @tablet-width) {
     gap: 20px;
+
+    &:hover::before {
+      border: 1px solid #bababa;
+    }
   }
 
   &::before {
@@ -64,11 +68,5 @@
 
   &:active {
     opacity: 0.3;
-  }
-
-  @media (min-width: @desktop-width) {
-    &:hover::before {
-      border: 1px solid #bababa;
-    }
   }
 }
