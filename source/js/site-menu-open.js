@@ -17,18 +17,18 @@ navToggle.addEventListener('click', function() {
   }
 });
 
-navToggle.addEventListener('click', func);
+navToggle.addEventListener('click', toggleClick);
 
-function func() {
-  window.addEventListener('click', handleClick);
+function toggleClick() {
+  window.addEventListener('click', windowClick);
 };
 
-function handleClick(event) {
+function windowClick(event) {
   const target = event.target;
   if (!target.closest('.header-nav__toggle') && !target.closest('.header-nav__list')) {
     navHeader.classList.remove('header-nav--opened');
     navHeader.classList.add('header-nav--closed');
-    window.removeEventListener('click', handleClick);
-    console.log('Обработчик событий удален');
+    window.removeEventListener('click', windowClick);
+    console.log('Обработчик событий удален по клику вне области меню');
   }
 };
