@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Cat Energy: каталог продукции</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="shortcut icon" href="img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
     <link rel="icon" href="img/favicons/favicon.svg" sizes="any" type="image/svg+xml">
     <link rel="manifest" href="manifest.json">
@@ -50,6 +52,9 @@
               <div class="product__layout">
                 <a class="product__image-link" href="#">
                   <picture>
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/products/pro-500-chicken-tablet@1x.webp 1x, img/products/pro-500-chicken-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/products/pro-500-chicken-mobile@1x.webp 1x, img/products/pro-500-chicken-mobile@2x.webp 2x">
+
                     <source media="(min-width: 768px)" srcset="img/products/pro-500-chicken-tablet@1x.png 1x, img/products/pro-500-chicken-tablet@2x.png 2x">
                     <img class="product__image" src="img/products/pro-500-chicken-mobile@1x.png" srcset="img/products/pro-500-chicken-mobile@2x.png 2x" width="140" height="112" alt="Cat Energy PRO со вкусом курицы, вес 500 г.">
                   </picture>
@@ -80,6 +85,9 @@
               <div class="product__layout">
                 <a class="product__image-link" href="#">
                   <picture>
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/products/pro-1000-chicken-tablet@1x.webp 1x, img/products/pro-1000-chicken-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/products/pro-1000-chicken-mobile@1x.webp 1x, img/products/pro-1000-chicken-mobile@2x.webp 2x">
+
                     <source media="(min-width: 768px)" srcset="img/products/pro-1000-chicken-tablet@1x.png 1x, img/products/pro-1000-chicken-tablet@2x.png 2x">
                     <img class="product__image" src="img/products/pro-1000-chicken-mobile@1x.png" srcset="img/products/pro-1000-chicken-mobile@2x.png 2x" width="140" height="112" alt="Cat Energy PRO со вкусом курицы, вес 1000 г.">
                   </picture>
@@ -110,6 +118,9 @@
               <div class="product__layout">
                 <a class="product__image-link" href="#">
                   <picture>
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/products/pro-500-fish-tablet@1x.webp 1x, img/products/pro-500-fish-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/products/pro-500-fish-mobile@1x.webp 1x, img/products/pro-500-fish-mobile@2x.webp 2x">
+
                     <source media="(min-width: 768px)" srcset="img/products/pro-500-fish-tablet@1x.png 1x, img/products/pro-500-fish-tablet@2x.png 2x">
                     <img class="product__image" src="img/products/pro-500-fish-mobile@1x.png" srcset="img/products/pro-500-fish-mobile@2x.png 2x" width="140" height="112" alt="Cat Energy PRO со вкусом рыбы, вес 500 г.">
                   </picture>
@@ -140,6 +151,9 @@
               <div class="product__layout">
                 <a class="product__image-link" href="#">
                   <picture>
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/products/pro-1000-fish-tablet@1x.webp 1x, img/products/pro-1000-fish-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/products/pro-1000-fish-mobile@1x.webp 1x, img/products/pro-1000-fish-mobile@2x.webp 2x">
+
                     <source media="(min-width: 768px)" srcset="img/products/pro-1000-fish-tablet@1x.png 1x, img/products/pro-1000-fish-tablet@2x.png 2x">
                     <img class="product__image" src="img/products/pro-1000-fish-mobile@1x.png" srcset="img/products/pro-1000-fish-mobile@2x.png 2x" width="140" height="112" alt="Cat Energy PRO со вкусом рыбы, вес 1000 г.">
                   </picture>
@@ -170,6 +184,9 @@
               <div class="product__layout">
                 <a class="product__image-link" href="#">
                   <picture>
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/products/slim-500-buckwheat-tablet@1x.webp 1x, img/products/slim-500-buckwheat-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/products/slim-500-buckwheat-mobile@1x.webp 1x, img/products/slim-500-buckwheat-mobile@2x.webp 2x">
+
                     <source media="(min-width: 768px)" srcset="img/products/slim-500-buckwheat-tablet@1x.png 1x, img/products/slim-500-buckwheat-tablet@2x.png 2x">
                     <img class="product__image" src="img/products/slim-500-buckwheat-mobile@1x.png" srcset="img/products/slim-500-buckwheat-mobile@2x.png 2x" width="140" height="112" alt="Cat Energy Slim со вкусом гречки, вес 500 г.">
                   </picture>
@@ -200,6 +217,9 @@
               <div class="product__layout">
                 <a class="product__image-link" href="#">
                   <picture>
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/products/slim-1000-buckwheat-tablet@1x.webp 1x, img/products/slim-1000-buckwheat-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/products/slim-1000-buckwheat-mobile@1x.webp 1x, img/products/slim-1000-buckwheat-mobile@2x.webp 2x">
+
                     <source media="(min-width: 768px)" srcset="img/products/slim-1000-buckwheat-tablet@1x.png 1x, img/products/slim-1000-buckwheat-tablet@2x.png 2x">
                     <img class="product__image" src="img/products/slim-1000-buckwheat-mobile@1x.png" srcset="img/products/slim-1000-buckwheat-mobile@2x.png 2x" width="140" height="112" alt="Cat Energy Slim со вкусом гречки, вес 1000 г.">
                   </picture>
@@ -230,6 +250,9 @@
               <div class="product__layout">
                 <a class="product__image-link" href="#">
                   <picture>
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/products/slim-500-rice-tablet@1x.webp 1x, img/products/slim-500-rice-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/products/slim-500-rice-mobile@1x.webp 1x, img/products/slim-500-rice-mobile@2x.webp 2x">
+
                     <source media="(min-width: 768px)" srcset="img/products/slim-500-rice-tablet@1x.png 1x, img/products/slim-500-rice-tablet@2x.png 2x">
                     <img class="product__image" src="img/products/slim-500-rice-mobile@1x.png" srcset="img/products/slim-500-rice-mobile@2x.png 2x" width="140" height="112" alt="Cat Energy Slim со вкусом риса, вес 500 г.">
                   </picture>
@@ -348,6 +371,10 @@
           </div>
         </div>
         <picture>
+          <source type="image/webp" media="(min-width: 1280px)" srcset="img/map/map-desktop@1x.webp 1x, img/map/map-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/map/map-tablet@1x.webp 1x, img/map/map-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/map/map-mobile@1x.webp 1x, img/map/map-mobile@2x.webp 2x">
+
           <source media="(min-width: 1280px)" srcset="img/map/map-desktop@1x.jpg 1x, img/map/map-desktop@2x.jpg 2x">
           <source media="(min-width: 768px)" srcset="img/map/map-tablet@1x.jpg 1x, img/map/map-tablet@2x.jpg 2x">
           <img class="contacts__picture-map" src="img/map/map-mobile@1x.jpg" srcset="img/map/map-mobile@2x.jpg 2x" alt="Карта с расположением магазина Cat Energy" width="320" height="362">
